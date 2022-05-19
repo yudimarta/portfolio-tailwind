@@ -18,6 +18,7 @@ window.onscroll = function() {
 // hamburger
 const hamburger = document.querySelector('#hamburger');
 const navmenu = document.querySelector('#nav-menu');
+const toTop = document.querySelector('#to-top');
 
 hamburger.addEventListener('click', function() {
     hamburger.classList.toggle('hamburger-active');
@@ -27,8 +28,8 @@ hamburger.addEventListener('click', function() {
 // Click Outside Hamburger to Close
 window.addEventListener('click', function(e){
     if(e.target != hamburger && e.target != navmenu){
-        hamburger.classList.toggle('hamburger-active');
-        navmenu.classList.toggle('hidden');
+        hamburger.classList.remove('hamburger-active');
+        navmenu.classList.add('hidden');
     }
 })
 
